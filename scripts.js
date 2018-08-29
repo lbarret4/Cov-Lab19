@@ -1,3 +1,7 @@
+
+
+
+$( document ).ready(function() {
 const diceUTF = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;'];
 
 let diceArray = [];
@@ -86,3 +90,5 @@ setTimeout(p1.roll(),1000)
 console.log(`value: ${p1.value}\n dice text ${p1.$dice.text()}\n dice code ${p1.$dice.text().codePointAt(0)}`);
 
 */
+
+});
