@@ -16,7 +16,12 @@ class Dice {
         this.value;
         this.$dice = $(`<div class="dice"></div>`).appendTo('.dice-container');
         this.roll();
-        this.$dice.css('color', randomColor())
+        this.$dice.css('color', randomColor());
+        this.$dice.on('click', () => this.roll());
+        this.$dice.on('dblclick', () => {
+        this.$dice.remove();
+        diceArray = diceArray.filter(otherDie => die !== otherDie);
+    });
     }
 
 
@@ -53,11 +58,7 @@ $sumButton.on('click', (e) => {
 function generateDice() {
     let die = new Dice();
     diceArray.push(die);
-    die.$dice.on('click', () => die.roll());
-    die.$dice.on('dblclick', () => {
-        die.$dice.remove();
-        diceArray = diceArray.filter(otherDie => die !== otherDie);
-    });
+    
 }
 
 function rollDice() {
