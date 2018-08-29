@@ -1,18 +1,16 @@
-squareButton {
-    display:block;
+.square-button {
+    display:inline-block;
 }
 
 .dice {
     display: inline-flex;
     flex-wrap: wrap;
-    background:black;
-    width:10em;
-    height: 10em;
+    font-size:25vh;
+    margin: 1.5px;
     border: 2px dashed red;
-    margin: 1.5px;  
+    
+    
 
-    /* Dice unicode font-size need to be offset by 120px to match a
-    div of a give width and height in pixels  */
 }
 
 div {
