@@ -7,7 +7,7 @@ const diceUTF = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;
 let diceArray = [];
 let icon = [];
 diceUTF.forEach(code => {
-    icon.push(String.fromCodePoint(code.substring(2, 6)))
+    icon.push(String.fromCodePoint(code.substring(2, 6)));
 });
 
 
@@ -38,7 +38,7 @@ class Dice {
 let $genButton = $('#genBtn');
 $genButton.on('click', (e) => {
     e.preventDefault();
-    generateDice()
+    generateDice();
 });
 
 let $rollButton = $('#rollBtn');
@@ -58,7 +58,6 @@ $sumButton.on('click', (e) => {
 function generateDice() {
     let die = new Dice();
     diceArray.push(die);
-    
 }
 
 function rollDice() {
