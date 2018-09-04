@@ -20,7 +20,7 @@ class Dice {
         this.$dice.on('click', () => this.roll());
         this.$dice.on('dblclick', () => {
         this.$dice.remove();
-        diceArray = diceArray.filter(otherDie => die !== otherDie);
+        diceArray = diceArray.filter(otherDie => this !== otherDie);
     });
     }
 
@@ -69,7 +69,6 @@ function rollDice() {
 function sumDice() {
     let sum = 0;
     diceArray.forEach(die => sum += die.value);
-    console.log(sum);
     alert(`\t(${icon[0]},${icon[1]},${icon[2]},${icon[3]},${icon[4]},${icon[5]}) \n The sum of all dice is ${sum}`);
     
 }
